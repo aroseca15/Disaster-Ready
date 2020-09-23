@@ -1,0 +1,16 @@
+.hero-body{
+    height: 300px;
+    margin-bottom: 25px;
+    background-image: url("/images/fire.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card{
+
+    height: 800px;
+}
+
+.row{
+ height: 350px;
+}
