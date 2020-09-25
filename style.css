@@ -1,7 +1,7 @@
 .hero-body{
     height: 300px;
     margin-bottom: 25px;
-    background-image: url("/images/fire.jpg");
+    background-image: url("./images/fire.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -14,3 +14,23 @@
 .row{
  height: 350px;
 }
+
+.one-fifth{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+
+
