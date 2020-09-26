@@ -3,7 +3,7 @@ $(document).ready(function () {
 	// let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
 	// let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
 
-	let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2"
+	let currentsApikey = "kUI1_WlEJf3YcmmImtsriX4FAmXPWzdByvElQow457N4ZW9e"
 	// need to establish what criteria to search for //
 	let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
 	let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=wildfires&apiKey=" + currentsApikey;
@@ -121,8 +121,10 @@ $(document).ready(function () {
 	})
 
 
+
+	// -------Displays linked pdf file------- //
 	$("#resourcePdf").on("click", function () {
-		let url = "https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf";
+		let url = $("#the-canvas").attr("src")
 		// If absolute URL from the remote server is provided, configure the CORS
 		// header on that server.
 		writePdftocanvas(url);
