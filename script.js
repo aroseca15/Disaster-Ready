@@ -38,8 +38,8 @@ $(document).ready(function () {
             // let cityWeather = $("input").val().trim()
 
             let weatherAPI = "fe4a853726c79035bac73e26c523869e";
-            let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "," + countryCode + "&appid=" + weatherAPI
-            let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + "," + countryCode + "&appid=" + weatherAPI
+            let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&appid=" + weatherAPI
+            let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",us&appid=" + weatherAPI
 
             $.ajax({
                 url: queryURL1,
