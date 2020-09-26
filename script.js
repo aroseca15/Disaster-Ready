@@ -2,7 +2,7 @@ let date = moment().format("MMM Do")
 // let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
 // let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
 
-let currentsAPI = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2"
+let currentsAPI = "kUI1_WlEJf3YcmmImtsriX4FAmXPWzdByvElQow457N4ZW9e"
 // need to establish what criteria to search for //
 let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=" + "wildfires" + "&language=en&apiKey=" + currentsAPI
 
