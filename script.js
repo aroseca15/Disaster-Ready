@@ -81,41 +81,71 @@ $.ajax({
 		}
 	});
 
+$("#resourcePdf").on("click", function () {
+	let url = "https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf";
+
+	$.ajax({
+		url: queryURL3,
+		method: "GET"
+	}).then(function (response) {
+		console.log(response)
+
+		for (let i = 0; i < 5; i++) {
+			let titleValue = $("<h4>").text(response.news[i].title).addClass("title is-5");
+			let firesDesc = $("<p>").text(response.news[i].description);
+			//$("#description").empty();
+			// let urlValue = response.news[i].url;
+
+			// let urlDiv = $("<a>").attr("href", "urlValue");
+			$("#description").append(titleValue, firesDesc);
+		}
+	})
+
+
+	$.ajax({
+		url: queryURL4,
+		method: "GET"
+	}).then(function (response) {
+		console.log(response)
+
+		let aqiValue = $("<p>").text("AQI: ");
+		let aqi = $("<p>").text(response.data.indexes.baqi.aqi).addClass("is-inline");
+		aqiValue.append(aqi);
+		let aqiCategory = $("<p>").text(response.data.indexes.baqi.category).addClass("is-inline");
+		let colorValue = response.data.indexes.baqi.color;
+		aqi.css("background-color", colorValue);
+		let dominantPollutant = $("<p>").text("Dominant Pollutant: " + response.data.indexes.baqi.dominant_pollutant);
+		$("#air").append(aqiValue, aqiCategory, dominantPollutant);
+
+
+	})
+});
+
 
 $.ajax({
-	url: queryURL3,
+	url: url,
 	method: "GET"
-}).then(function (response) {
-	console.log(response)
-
-	for (let i = 0; i < 5; i++) {
-		let titleValue = $("<h4>").text(response.news[i].title).addClass("title is-5");
-		let firesDesc = $("<p>").text(response.news[i].description);
-		//$("#description").empty();
-		// let urlValue = response.news[i].url;
-
-		// let urlDiv = $("<a>").attr("href", "urlValue");
-		$("#description").append(titleValue, firesDesc);
-	}
 })
+	.then(function (pdf) {
+		return pdf;
+	})
+	.then(function (page) {
+		let scale = 1.5;
 
+		let viewport = page.getViewport(scale);
 
-$.ajax({
-	url: queryURL4,
-	method: "GET"
-}).then(function (response) {
-	console.log(response)
+		let canvas = $("#the-canvas");
 
-	let aqiValue = $("<p>").text("AQI: ");
-	let aqi = $("<p>").text(response.data.indexes.baqi.aqi).addClass("is-inline");
-	aqiValue.append(aqi);
-	let aqiCategory = $("<p>").text(response.data.indexes.baqi.category).addClass("is-inline");
-	let colorValue = response.data.indexes.baqi.color;
-	aqi.css("background-color", colorValue);
-	let dominantPollutant = $("<p>").text("Dominant Pollutant: " + response.data.indexes.baqi.dominant_pollutant);
-	$("#air").append(aqiValue, aqiCategory, dominantPollutant);
+		let context = canvas.getContext('2d');
 
+		canvas.height = viewport.height;
+		canvas.width = viewport.width;
 
-})
+		let renderContext = {
+			canvasContext: context,
+			viewport: viewport
+		};
 
+		page.render(renderContext);
+	});
 
