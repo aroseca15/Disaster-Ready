@@ -1,88 +1,88 @@
-let date = moment().format("MMM Do")
-// let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
-// let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
+$(document).ready(function () {
+	let date = moment().format("MMM Do")
+	// let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
+	// let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
 
-let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2"
-// need to establish what criteria to search for //
-let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
-let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=wildfires&apiKey=" + currentsApikey;
+	let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2"
+	// need to establish what criteria to search for //
+	let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
+	let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=wildfires&apiKey=" + currentsApikey;
 
-let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?lat=40.7608&lon=-111.8910&key=" + airqualityApikey;
-
-
+	let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?lat=40.7608&lon=-111.8910&key=" + airqualityApikey;
 
 
-// let cityWeather = $("input").val().trim()
 
-let weatherAPI = "fe4a853726c79035bac73e26c523869e";
-let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=Tucson&appid=" + weatherAPI
-let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=Tucson&appid=" + weatherAPI
 
-$.ajax({
-	url: queryURL1,
-	method: "GET"
-})
+	// let cityWeather = $("input").val().trim()
 
-	.then(function (response) {
-		//console.log(response);
+	let weatherAPI = "fe4a853726c79035bac73e26c523869e";
+	let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=Tucson&appid=" + weatherAPI
+	let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=Tucson&appid=" + weatherAPI
 
-		let newCol = $("<div>").attr("class", "one-fifth");
-		$(".forecast").prepend(newCol);
-
-		let newCard = $("<div>");
-		newCol.append(newCard);
-
-		let cardDate = $("<div>").text(date);
-		newCard.append(cardDate);
-
-		let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
-		newCard.append(cardImg);
-
-		let bodyDiv = $("<div>").attr("class", "card-content");
-		newCard.append(bodyDiv);
-
-		let tempF = Math.floor((response.main.temp - 273.15) * 1.80 + 32)
-		bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
-		bodyDiv.append($("<p>").text("Humidity: " + response.main.humidity + "%"));
-		bodyDiv.append($("<p>").text("wind: " + response.wind.speed + " MPH"));
+	$.ajax({
+		url: queryURL1,
+		method: "GET"
 	})
 
-$.ajax({
-	url: queryURL2,
-	method: "GET"
-})
+		.then(function (response) {
+			//console.log(response);
 
-	.then(function (response) {
-		//console.log(response);
-		let newrow = $(".forecast")
+			let newCol = $("<div>").attr("class", "one-fifth");
+			$(".forecast").prepend(newCol);
 
-		for (let i = 0; i < response.list.length; i++) {
-			if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-				let newCol = $("<div>").attr("class", "one-fifth");
-				newrow.append(newCol);
+			let newCard = $("<div>");
+			newCol.append(newCard);
 
-				let newCard = $("<div>");
-				newCol.append(newCard);
+			let cardDate = $("<div>").text(date);
+			newCard.append(cardDate);
 
-				let cardDate = $("<div>").text(moment(response.list[i].dt, "X").format("MMM Do"));
-				newCard.append(cardDate);
+			let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+			newCard.append(cardImg);
 
-				let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png");
-				newCard.append(cardImg);
+			let bodyDiv = $("<div>").attr("class", "card-content");
+			newCard.append(bodyDiv);
 
-				let bodyDiv = $("<div>").attr("class", "card-content");
-				newCard.append(bodyDiv);
+			let tempF = Math.floor((response.main.temp - 273.15) * 1.80 + 32)
+			bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
+			bodyDiv.append($("<p>").text("Humidity: " + response.main.humidity + "%"));
+			bodyDiv.append($("<p>").text("wind: " + response.wind.speed + " MPH"));
+		})
 
-				let tempF = Math.floor((response.list[i].main.temp - 273.15) * 1.80 + 32)
-				bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
-				bodyDiv.append($("<p>").text("Humidity: " + response.list[i].main.humidity + "%"));
-				bodyDiv.append($("<p>").text("wind: " + response.list[i].wind.speed + " MPH"));
+	$.ajax({
+		url: queryURL2,
+		method: "GET"
+	})
+
+		.then(function (response) {
+			//console.log(response);
+			let newrow = $(".forecast")
+
+			for (let i = 0; i < response.list.length; i++) {
+				if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+					let newCol = $("<div>").attr("class", "one-fifth");
+					newrow.append(newCol);
+
+					let newCard = $("<div>");
+					newCol.append(newCard);
+
+					let cardDate = $("<div>").text(moment(response.list[i].dt, "X").format("MMM Do"));
+					newCard.append(cardDate);
+
+					let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png");
+					newCard.append(cardImg);
+
+					let bodyDiv = $("<div>").attr("class", "card-content");
+					newCard.append(bodyDiv);
+
+					let tempF = Math.floor((response.list[i].main.temp - 273.15) * 1.80 + 32)
+					bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
+					bodyDiv.append($("<p>").text("Humidity: " + response.list[i].main.humidity + "%"));
+					bodyDiv.append($("<p>").text("wind: " + response.list[i].wind.speed + " MPH"));
+				}
 			}
-		}
-	});
+		});
 
-$("#resourcePdf").on("click", function () {
-	let url = "https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf";
+
 
 	$.ajax({
 		url: queryURL3,
@@ -119,33 +119,58 @@ $("#resourcePdf").on("click", function () {
 
 
 	})
-});
 
 
-$.ajax({
-	url: url,
-	method: "GET"
-})
-	.then(function (pdf) {
-		return pdf;
-	})
-	.then(function (page) {
-		let scale = 1.5;
+	$("#resourcePdf").on("click", function () {
+		let url = "https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf";
+		// If absolute URL from the remote server is provided, configure the CORS
+		// header on that server.
+		writePdftocanvas(url);
 
-		let viewport = page.getViewport(scale);
-
-		let canvas = $("#the-canvas");
-
-		let context = canvas.getContext('2d');
-
-		canvas.height = viewport.height;
-		canvas.width = viewport.width;
-
-		let renderContext = {
-			canvasContext: context,
-			viewport: viewport
-		};
-
-		page.render(renderContext);
 	});
+	function writePdftocanvas(url) {
 
+		// Loaded via <script> tag, create shortcut to access PDF.js exports.
+		var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+		// The workerSrc property shall be specified.
+		pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+		// Asynchronous download of PDF
+		var loadingTask = pdfjsLib.getDocument(url);
+		loadingTask.promise.then(function (pdf) {
+			console.log('PDF loaded');
+
+			// Fetch the first page
+			var pageNumber = 1;
+			pdf.getPage(pageNumber).then(function (page) {
+				console.log('Page loaded');
+
+				var scale = 1.5;
+				var viewport = page.getViewport({ scale: scale });
+
+				// Prepare canvas using PDF page dimensions
+				var canvas = document.getElementById('the-canvas');
+				var context = canvas.getContext('2d');
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+
+				// Render PDF page into canvas context
+				var renderContext = {
+					canvasContext: context,
+					viewport: viewport
+				};
+				var renderTask = page.render(renderContext);
+				renderTask.promise.then(function () {
+					console.log('Page rendered');
+				});
+			});
+		}, function (reason) {
+			// PDF loading error
+			console.error(reason);
+		});
+
+
+
+	}
+});
