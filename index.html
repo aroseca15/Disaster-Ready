@@ -14,46 +14,85 @@
 <!-- Fire: Photo by Tobias Rehbien from Pexels -->
 
 <body class="body">
-    <main class="container">
+    <main class="containerMain">
         <nav class="navbar is-warning is-fixed-top">
 
             <input class="searchBy-zip" type="text" placeholder="Search by zipcode"></input>
         </nav>
 
         <section id="icon-divs">
-            <div class="row1">
-                <div class="col-md-12">
-                    <br>
-                    <img id="floods" src="./Assests/images/chris-gallagher-4zxp5vlmvni-unsplash.jpg"
-                        alt='natrual disater floods' height="145px" width="500px">
+            <div class="columns">
+                <div class="column">
+                   <figure class="container">
+                    <img id="image" src="./Assests/images/chris-gallagher-4zxp5vlmvni-unsplash.jpg"
+                        alt='natrual disater floods' height="145px" width="400px">
+                        <span class= "flood-overlay">
+                            <span class="text">Floods</span>
+                        </span>
+                    </figure>
+                </div>
 
-                    <img id="blizzards" src="./Assests/images/city-trucks-tackle-blizzard.jpg"
-                        alt='natrual disater blizzards' height="145px" width="500px">
+
+
+                <div class="column">
+                    <figure class="container">
+                    <img id="image" src="./Assests/images/city-trucks-tackle-blizzard.jpg"
+                        alt='natrual disater blizzards' height="145px" width="400px">
+                        <span class="blizzard-overlay">
+                            <span class="text">Blizzards</span>
+                        </span>
+                    </figure>
                 </div>
             </div>
-            <div class="row2">
-                <div class="col-md-12">
-                    <img src="./Assests/images/pexels-ralph-w-lambrecht-1446076.jpg" height="145px" width="500px">
-                    <img src="./Assests/images/key-west-86025.jpg" alt="natrual disater hurricane" height="145px"
-                        width="500px">
-                </div>
-                <div class="row3">
-                    <div class="col-md-12">
-                        <figure class="container">
-                        <img id="imageEar" src="./Assests/images/sunyu-kim-1sqg9tmkmlk-unsplash.jpg" alt="natrual disater earthquake">
-                        <div class="earthquake-overlay">
-                            <div class="text">Earthquakes</div>
-                        </div>
+
+            <div class="columns">
+                <span class="column">
+                    <figure class="container">
+                    <img id="imageTor" src="./Assests/images/pexels-ralph-w-lambrecht-1446076.jpg" height= "145px" width= "400px">
+                    <span class="tornado-overlay">
+                        <span class="text">Tornados</span>
+                    </span>
                     </figure>
+                </span>
 
-
-                        <figure class="container">
-                            <a href="fires.html"><img id="imageFi" src="./Assests/images/2new_fire_pexels-tobias-rehbein-3448641.jpg" alt="natrual disater fire"></a>
-                            <div class="fire-overlay">
-                                <div class="text">Fires</div>
-                            </div>
-                        </figure>
+                <div class="column">
+                    <figure class="imageCart">
+                    <img id="imageHurr" src="./Assests/images/key-west-86025.jpg" height= "145px" width= "400px"
+                        alt=" natrual disater hurricane">
+                    <div class="hurr-overlay">
+                        <div class="text">Hurricanes</div>
                     </div>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <figure class="imageCart">
+                    <img id="imageEar" src="./Assests/images/sunyu-kim-1sqg9tmkmlk-unsplash.jpg" height= "145px" width= "400px"
+                        alt="natural disater earthquake">
+                    <div class="earthquake-overlay">
+                        <div class="text">Earthquakes</div>
+                    </div>
+                    </figure>
+                </div>
+                <!-- <div class="container">
+                    <img src="img_avatar.png" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                      <div class="text">John Doe</div>
+                    </div>
+                  </div> -->
+                <div class="column">
+                    <figure class="imageCart">
+                    <a href="fires.html"><img id="imageFi"
+                            src="./Assests/images/2new_fire_pexels-tobias-rehbein-3448641.jpg" height= "145px" width= "400px"
+                        alt="natural disater fire"></a>
+                    <div class="fire-overlay">
+                        <div class="text">Fires</div>
+                    </div>
+                    </figure>
+                </div>
+            </div>
         </section>
 
 

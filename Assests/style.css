@@ -1,4 +1,4 @@
-.container{
+.containerMain{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +39,14 @@
     justify-content: center;
 }
 
+.imageCart{
+    position: relative;
+}
+
 #imageFi {
     position: relative;
     opacity: 1;
     display: block;
-    width: 45%;
-    height: 75%;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -54,18 +56,18 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 30%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.container:hover #imageFi {
+.imageCart:hover #imageFi {
     opacity: 0.3;
 }
 
 
-.container:hover .fire-overlay {
+.imageCart:hover .fire-overlay {
     opacity: 1;
 }
 
@@ -78,17 +80,78 @@
     padding: 16px 32px;
 }
 
-#imageEar{
+#imageEar {
     position: relative;
     opacity: 1;
     display: block;
-    width: 45%;
-    height: 75%;
     transition: .5s ease;
     backface-visibility: hidden;
 }
 
 .earthquake-overlay {
+    transition: .5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageEar {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .earquake-overlay {
+    opacity: 1;
+}
+
+
+
+#imageTor {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.tornado-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.container:hover #imageTor {
+    opacity: 0.3;
+}
+
+
+.container:hover .tornado-overlay {
+    opacity: 1;
+}
+
+
+
+
+#imageHurr {
+    position: relative;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hurr-overlay {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -99,23 +162,17 @@
     text-align: center;
 }
 
-.container:hover #imageEar {
+.container:hover #imageHurr {
     opacity: 0.3;
 }
 
 
-.container:hover .earthquake-overlay {
+.container:hover .hurr-overlay {
     opacity: 1;
 }
 
 
-.text {
-    background-color: none;
-    color: beige;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 60px;
-    padding: 16px 32px;
-}
+
 
 
 
@@ -139,3 +196,4 @@
     background: rgba(0, 0, 0, 0.6);
     color: white
 } */
+
