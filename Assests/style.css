@@ -93,7 +93,7 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 48%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -124,7 +124,7 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 48%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -156,7 +156,7 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 48%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -171,7 +171,63 @@
     opacity: 1;
 }
 
+#imageFlod {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
 
+.flood-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageFlod {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .flood-overlay {
+    opacity: 1;
+}
+
+#imageBliz {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.blizzard-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left:48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageBliz {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .blizzard-overlay {
+    opacity: 1;
+}
 
 
 
