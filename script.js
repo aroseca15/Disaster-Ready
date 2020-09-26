@@ -1,13 +1,37 @@
+const callComplete = (userLocation) => {
+    console.log(userLocation);
+    console.log(userLocation.coords.latitude);
+    console.log(userLocation.coords.longitude);
+    let latitude = userLocation.coords.latitude;
+    let longitude = userLocation.coords.longitude;
+    
+    let queryGeoURL = "https://nominatim.openstreetmap.org/reverse?format=geojson&lat=" + latitude + "&lon=" + longitude;
+    $.ajax({
+        url: queryGeoURL,
+        method: "GET",
+      //  lat: userLocation.coords.latitude,
+      //  lng: userLocation.coords.longitude,
+    }).then(function (userLocation) {
+        console.log(userLocation);
+
+        let zipCode = userLocation.features[0].properties.address.postcode;
+        let userState = userLocation.features[0].properties.address.state;
+        let countryCode = userLocation.features[0].properties.address.country_code;
+
+        console.log(zipCode);
+        console.log(userState);
+        console.log(countryCode);
+
 let date = moment().format("MMM Do")
 // let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
 // let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
 
-let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2"
+let currentsApikey = "kUI1_WlEJf3YcmmImtsriX4FAmXPWzdByvElQow457N4ZW9e"
 // need to establish what criteria to search for //
 let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
 let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=wildfires&apiKey=" + currentsApikey;
 
-let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?lat=40.7608&lon=-111.8910&key=" + airqualityApikey;
+let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?lat=" + latitude + "&lon=" + longitude + "&key=" + airqualityApikey;
 
 
 
@@ -15,8 +39,8 @@ let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?l
 // let cityWeather = $("input").val().trim()
 
 let weatherAPI = "fe4a853726c79035bac73e26c523869e";
-let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=Tucson&appid=" + weatherAPI
-let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=Tucson&appid=" + weatherAPI
+let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "," + countryCode + "&appid=" + weatherAPI
+let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + "," + countryCode + "&appid=" + weatherAPI
 
 $.ajax({
 	url: queryURL1,
@@ -117,4 +141,15 @@ $.ajax({
 
 
 })
-
+    });
+};
+//log geolocation call error
+const callProblem = (problem) => {
+    console.error(problem)
+};
+navigator.geolocation.getCurrentPosition(callComplete, callProblem); {
+//more accurate, larger power consumption
+enableHighAccuracy: true
+//time out geolocation call after 15 seconds
+timeout: 15000
+}
