@@ -1,0 +1,257 @@
+.containerMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.body{
+    background-color: slategray;
+}
+
+.navbar{
+    margin-bottom: 35%;
+}
+
+.row1 , .row2{
+    padding-left: 10%;
+    
+    
+}
+
+.row1{
+    padding-top: 10%;
+    margin: 1%;
+
+
+}
+
+.row3{
+    margin: 1%;
+    padding-right: 2;
+    
+}
+.searchBy-zip{
+    background-color: beige;
+    border-color: red;
+    align-self: center;
+    justify-content: center;
+}
+
+.imageCart{
+    position: relative;
+}
+
+#imageFi {
+    position: relative;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.fire-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.imageCart:hover #imageFi {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .fire-overlay {
+    opacity: 1;
+}
+
+
+.text {
+    background-color: none;
+    color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    padding: 16px 32px;
+}
+
+#imageEar {
+    position: relative;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.earthquake-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageEar {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .earthquake-overlay {
+    opacity: 1;
+}
+
+
+
+#imageTor {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.tornado-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageTor {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .tornado-overlay {
+    opacity: 1;
+}
+
+
+
+
+#imageHurr {
+    position: relative;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hurr-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.imageCart:hover #imageHurr {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .hurr-overlay {
+    opacity: 1;
+}
+
+#imageFlod {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.flood-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageFlod {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .flood-overlay {
+    opacity: 1;
+}
+
+#imageBliz {
+    position: relative;
+    opacity: 1;
+    display: inline;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.blizzard-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left:48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.imageCart:hover #imageBliz {
+    opacity: 0.3;
+}
+
+
+.imageCart:hover .blizzard-overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* .image1{
+    position: relative;
+    width: 400px 
+}
+
+.floods{
+    display: block;
+    width: 100%;
+}
+
+.floods-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white
+} */
+
