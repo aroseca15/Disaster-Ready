@@ -1,0 +1,41 @@
+.hero-body{
+    height: 300px;
+    margin-bottom: 25px;
+    background-image: url("./images/fire.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card{
+
+    height: 800px;
+}
+
+.row{
+ height: 50%;
+}
+
+.one-fifth{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+#the-canvas {
+    border: 1px solid black;
+    direction: ltr;
+  }
+
+
+
+
