@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.body{
+.bodyI{
     background-color: slategray;
 }
 
@@ -228,6 +228,8 @@
 .imageCart:hover .blizzard-overlay {
     opacity: 1;
 }
+
+
 
 
 
