@@ -1,0 +1,79 @@
+.hero-body{
+    height: 300px;
+    margin-bottom: 25px;
+    background-image: url('./Assests/images/pexels-wilson-malone-4558211.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#airQ {
+    color: black;
+    font-weight: 600;
+}
+.card{
+    background-color: lightblue;
+    max-height:300px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.row{
+height: 50%;
+}
+
+.one-fifth{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+    
+}
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    background-color:beige;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.card-body {
+    padding: 20px;
+
+}
+
+#the-canvas {
+    /* border: 1px solid black; */
+    padding-top: 5%;
+    direction: ltr;
+}
+
+#Weather {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+#News{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+/* class body and class forecast need to be same color. */
+.body {
+    background-color:beige;
+}
+
+.navbar {
+    background-color:darkslategray;
+}
+
+.navbar-item{
+    color: whitesmoke;
+    font-size: 5rem;
+}
+
+
