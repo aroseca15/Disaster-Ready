@@ -121,7 +121,7 @@ $(document).ready(function () {
 
                     // let urlDiv = $("<a>").attr("href", "urlValue");
                     $("#description").append(titleValue, firesDesc);
-                    $("h4").css({"color": "black", "font-weight": "545", "font-size": "1.8rem"});
+                    $("h4").css({"color": " whitesmoke;", "font-weight": "545", "font-size": "1.8rem"});
                 }
             })
 
