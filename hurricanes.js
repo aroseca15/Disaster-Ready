@@ -30,7 +30,7 @@ $(document).ready(function () {
             let currentsApikey = "kUI1_WlEJf3YcmmImtsriX4FAmXPWzdByvElQow457N4ZW9e"
             // need to establish what criteria to search for //
             let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
-            let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=snow&storms&warnings&apiKey=" + currentsApikey;
+            let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=hurricanes&apiKey=" + currentsApikey;
 
             let queryURL4 = "https://api.breezometer.com/air-quality/v2/current-conditions?lat=" + latitude + "&lon=" + longitude + "&key=" + airqualityApikey;
 
@@ -114,12 +114,14 @@ $(document).ready(function () {
 
                 for (let i = 0; i < 5; i++) {
                     let titleValue = $("<h4>").text(response.news[i].title).addClass("title is-5");
+                    // $('h4').css("font-color:", "black");
                     let firesDesc = $("<p>").text(response.news[i].description);
                     //$("#description").empty();
                     // let urlValue = response.news[i].url;
 
                     // let urlDiv = $("<a>").attr("href", "urlValue");
                     $("#description").append(titleValue, firesDesc);
+                    $("h4").css({"color": "black", "font-weight": "545", "font-size": "1.8rem"});
                 }
             })
 

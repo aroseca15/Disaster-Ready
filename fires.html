@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="fires.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<!-- Banner Photo Credit: Wilson Malone from Pexels -->
+    <!-- Banner Photo Credit: Wilson Malone from Pexels -->
 </head>
 
 <body>
@@ -19,11 +19,14 @@
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="container">
-                <div class="navbar-brand">
+                <div class="navbar-end">
                     <div class="navbar-item title">
                         F I R E S
                     </div>
-                    <input class="searchBy-zip" type="text" placeholder="Search by zipcode"></input>
+                    <div class="searchAdjust">
+                        <input id="searchBy-city" class="input is-focused" type="text"
+                            placeholder="Search by City"></input>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -44,7 +47,8 @@
                         <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
                         <div id="air"></div>
                         <h2 class="title is-2"> </h2>
-                        <button id="resourcePdf">Fire escape plan</button>
+                        <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
+                        <button id="resourcePdfD" class="button is-success">Plan Download</button>
                     </div>
                 </div>
             </div>
@@ -59,12 +63,14 @@
                             <div class="forecast"></div>
                         </div>
                     </section>
+
                     <section class="section">
                         <div class='row is-full'>
                             <div class="column is-3">
                                 <h2 id="News" class="title is-2"> Latest News: </h2>
                             </div>
-                            <!-- <iframe 
+                    </section>
+                    <!-- <iframe 
                     name="my_iframe" 
                     srcdoc="<h1 style='text-align:center; color:#9600fa' ></h1>"
                     src="https://www.birthdaycalculatorbydate.com/"
@@ -72,22 +78,23 @@
                     height="200px"
                 
                 ></iframe> -->
-                            <div id="description"></div>
+                    <section class="section">
+                        <div id="description"></div>
 
 
 
-                        </div>
-                    </section>
-                    <!-- <div class='row is-full'>
+                </div>
+                </section>
+                <!-- <div class='row is-full'>
                     <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
                 </div> -->
-                    <div>
-                        <canvas id="the-canvas"
-                            src="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf"></canvas>
-                    </div>
+                <div>
+                    <canvas id="the-canvas"
+                        src="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf"></canvas>
                 </div>
-
             </div>
+
+        </div>
 
 
         </div>

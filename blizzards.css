@@ -1,9 +1,23 @@
 .hero-body{
     height: 300px;
     margin-bottom: 25px;
-    background-image: url("./images/fire.jpg");
+    background-image: url("./Assests/images/erik-mclean-gM15fKWMMNA-unsplash.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.navbar-end{
+    padding-right: 5em; 
+}
+
+.searchAdjust {
+    padding-top: 7ex;
+    padding-right: 45ex;
+}
+
+#searchBy-city {
+    font-size: 1.3rem;
+    margin-left: 10ex;
 }
 
 #airQ {
@@ -12,11 +26,24 @@
 }
 .card{
     background-color: rgb(0, 149, 255);
-    max-height:300px;
+    max-height:400px;
     color: black;
     font-weight: 600;
     font-size: 1.3rem;
 }
+
+#resourcePdf {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+#resourcePdfD {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+} 
+
 
 .row{
 height: 50%;
@@ -62,6 +89,14 @@ height: 50%;
     color: black;
     font-weight: 600;
 }
+
+#description {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
 /* class body and class forecast need to be same color. */
 .body {
     background-color:lightgrey;
