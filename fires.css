@@ -61,7 +61,7 @@ height: 50%;
     display: flex;
     flex-direction: row;
     height: 50%;
-    background-color:lightgrey;
+    background-color:rgba(169, 169, 169, 0.02);
     color: black;
     font-weight: 600;
     font-size: 1.3rem;
@@ -98,8 +98,8 @@ height: 50%;
 }
 
 /* class body and class forecast need to be same color. */
-.body {
-    background-color:lightgrey;
+#body {
+    background-color:rgba(169, 169, 169, 0.768);
 }
 
 .navbar {
