@@ -27,7 +27,7 @@ $(document).ready(function () {
             // let ambeeAPI = "RjbEzFhLiK6G13X0NrxD94kbFuy94zx21vvV3JSe"
             // let queryURL2 = "https://api.ambeedata.com/latest/by-city?city=tucson"
 
-            let currentsApikey = "kUI1_WlEJf3YcmmImtsriX4FAmXPWzdByvElQow457N4ZW9e"
+            let currentsApikey = "YNp25gvEmTzmubIRMtoKTfIO3I9NgNG_5fkJ9IKhkytuRyiB"
             // need to establish what criteria to search for //
             let airqualityApikey = "0a6dc53979bc4b6b93731240445160fe"
             let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=snow&storms&warnings&apiKey=" + currentsApikey;
@@ -121,7 +121,7 @@ $(document).ready(function () {
 
                     // let urlDiv = $("<a>").attr("href", "urlValue");
                     $("#description").append(titleValue, firesDesc);
-                    $("h4").css({"color": " whitesmoke;", "font-weight": "545", "font-size": "1.8rem"});
+                    $("h4").css({"color": " whitesmoke", "font-weight": "545", "font-size": "1.8rem"});
                 }
             })
 

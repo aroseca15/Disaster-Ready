@@ -6,13 +6,22 @@
     background-position: center;
 }
 
+#nav_NewH {
+display: none;
+background-color:rgb(23, 0, 100);
+}
+
+.text_Bliz {
+    color: whitesmoke;
+}
+
 .navbar-end{
     padding-right: 5em; 
 }
 
 .searchAdjust {
     padding-top: 7ex;
-    padding-right: 45ex;
+    padding-right: 55ex;
 }
 
 #searchBy-city {

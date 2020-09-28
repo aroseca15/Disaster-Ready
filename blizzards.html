@@ -11,13 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- Photo Credit Banner: Erik Mclean on unsplash.com -->
 </head>
+<style>
+    @media only screen and (max-width: 600px) {
+        #nav_R {
+            display: none;
+        }
+
+        #nav_NewH {
+            display: inline;
+        }
+    }
+
+    /* @media only screen and (min-width: 537px){
+        #nav_R{
+            display: ;
+        }
+    } */
+</style>
 
 <body>
-    <main class="body">
+    <main class="body container-max-width">
         <!-- Start of Navbar -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav id="nav_R" class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-end">
-                <div class="navbar-item title">
+                <div class="navbar-item">
                     B l i z z a r d s
                 </div>
                 <div class="searchAdjust">
@@ -29,11 +46,19 @@
 
         <!-- End of Navbar -->
 
+        <div id="nav_NewH">
+            <div class="text_Bliz">
+                B l i z z a r d s
+            </div>
+            <div>
+                <input type="text" placeholder="Search by City"></input>
+            </div>
+
+        </div>
         <!-- Banner  -->
         <div class="hero-body" id="blizzards-banner">
-            <div class="container">
-
-            </div>
+            <!-- <div class="container">
+            </div> -->
         </div>
 
         <div class="columns">
@@ -49,20 +74,30 @@
                 </div>
 
             </div>
-            <div class="column">
-
-                <div class='rows'>
-                    <section class="section">
-                        <div class='row' id='weather'>
-                            <h2 id="Weather" class="title is-2"> Weather Forecast: </h2>
-                            <div class="forecast"></div>
-                        </div>
 
 
+
+
+
+
+
+
+
+            
+                <div class="column">
+
+                    <div class='rows'>
                         <section class="section">
-                            <div class='row is-full'>
-                                <h2 id="News" class="title is-2">Latest News: </h2>
-                                <!-- <iframe 
+                            <div class='row' id='weather'>
+                                <h2 id="Weather" class="title is-2"> Weather Forecast: </h2>
+                                <div class="forecast"></div>
+                            </div>
+
+
+                            <section class="section">
+                                <div class='row is-full'>
+                                    <h2 id="News" class="title is-2">Latest News: </h2>
+                                    <!-- <iframe 
                     name="my_iframe" 
                     srcdoc="<h1 style='text-align:center; color:#9600fa' ></h1>"
                     src="https://www.birthdaycalculatorbydate.com/"
@@ -70,16 +105,35 @@
                     height="200px"
                        
                  ></iframe> -->
-                        </section>
-                        <div id="description"></div>
+                            </section>
+                            <div id="description"></div>
 
 
 
-                </div>
-                <!-- <div class='row is-full'>
+                    </div>
+                    <!-- <div class='row is-full'>
                     <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
                 </div> -->
-            </div>
+                </div>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
 
