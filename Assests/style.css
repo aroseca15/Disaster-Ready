@@ -8,10 +8,17 @@
 
 .bodyI{
     background-color: slategray;
+    padding-top: 20ex;
 }
 
 .navbar{
     margin-bottom: 35%;
+}
+
+.navbar-item{
+    color: black;
+    font-size: 5rem;
+    padding-right: 6ex;
 }
 
 .row1 , .row2{
@@ -21,7 +28,7 @@
 }
 
 .row1{
-    padding-top: 10%;
+    padding-top: 60fr;
     margin: 1%;
 
 
