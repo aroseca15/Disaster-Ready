@@ -29,7 +29,7 @@
     font-weight: 600;
 }
 .card{
-    background-color: ;
+    background-color: rgba(71, 61, 139, 0.367);
     max-height:400px;
     color: black;
     font-weight: 600;
@@ -64,7 +64,7 @@ height: 50%;
     display: flex;
     flex-direction: row;
     height: 50%;
-    background-color:beige;
+    background-color: rgba(210, 105, 30, 0);
     color: black;
     font-weight: 600;
     font-size: 1.3rem;
@@ -106,7 +106,7 @@ height: 50%;
 }
 
 .navbar {
-    background-color:darkcyan
+    background-color:darkcyan;
 }
 
 .navbar-item{
