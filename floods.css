@@ -1,0 +1,128 @@
+.hero-body{
+    height: 300px;
+    margin-bottom: 25px;
+    background-image: url("./Assests/images/chris-gallagher-4zxp5vlmvni-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-end{
+    padding-right: 5em; 
+}
+
+.searchAdjust {
+    padding-top: 7ex;
+    padding-right: 50ex;
+}
+
+#searchBy-city {
+    font-size: 1.3rem;
+    margin-left: 10ex;
+}
+
+#airQ {
+    color: black;
+    font-weight: 600;
+}
+.card{
+    background-color: rosybrown;
+    max-height:400px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#resourcePdf {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+#resourcePdfD {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+} 
+
+.menu-label {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 600;
+}
+
+.menu {
+    background-color: rgba(188, 143, 143, 0.408);
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    
+}
+
+
+.row{
+height: 50%;
+}
+
+.one-fifth{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(222, 184, 135);
+    
+}
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    background-color: rgba(245, 222, 179, 0.578);
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.card-body {
+    padding: 20px;
+
+}
+
+#the-canvas {
+    /* border: 1px solid black; */
+    padding-top: 5%;
+    direction: ltr;
+}
+
+#Weather {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+#News{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+#description {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+/* class body and class forecast need to be same color. */
+.body {
+    background-color: rgba(245, 222, 179, 0.578);
+}
+
+.navbar {
+    background-color: darkolivegreen;
+}
+
+.navbar-item{
+    color: black;
+    font-size: 5rem;
+}
+
+

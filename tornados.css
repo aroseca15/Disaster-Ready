@@ -1,0 +1,132 @@
+.hero-body{
+    height: 300px;
+    margin-bottom: 25px;
+    background-image: url("./Assests/images/pexels-ralph-w-lambrecht-1446076.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* .navbar-item {
+    
+} */
+
+.navbar-end{
+    padding-right: 5em; 
+}
+
+.searchAdjust {
+    padding-top: 7ex;
+    padding-right:40ex;
+}
+
+#searchBy-city {
+    font-size: 1.3rem;
+    margin-left: 10ex;
+}
+
+#airQ {
+    color: black;
+    font-weight: 600;
+}
+.card{
+    background-color: rgba(71, 61, 139, 0.367);
+    max-height:400px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#resourcePdf {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+#resourcePdfD {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+} 
+
+.menu-label {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 600;
+}
+
+.menu {
+    background-color:  rgba(188, 143, 183, 0.36);
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    
+}
+
+
+.row{
+height: 50%;
+}
+
+.one-fifth{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+    
+}
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    background-color: rgba(210, 105, 30, 0);
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.card-body {
+    padding: 20px;
+
+}
+
+#the-canvas {
+    /* border: 1px solid black; */
+    padding-top: 5%;
+    direction: ltr;
+}
+
+#Weather {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+#News{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+#description {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+/* class body and class forecast need to be same color. */
+.body {
+    background-color: rgba(210, 105, 30, 0.115);
+}
+
+.navbar {
+    background-color:darkcyan;
+}
+
+.navbar-item{
+    color:whitesmoke;
+    font-size: 5rem;
+}
+
+
