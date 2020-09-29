@@ -123,7 +123,8 @@ $(document).ready(function () {
 			function news() {
 
 				let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2";
-				let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=wildfires&apiKey=" + currentsApikey;
+				let keyWords = $("#News").attr("value")
+				let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=" + keyWords + "&apiKey=" + currentsApikey;
 
 				$.ajax({
 					url: queryURL3,
@@ -173,7 +174,7 @@ $(document).ready(function () {
 
 
 			$("#resourcePdf").on("click", function () {
-				let url = "https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf";
+				let url = $("#the-canvas").attr("src")
 				// If absolute URL from the remote server is provided, configure the CORS
 				// header on that server.
 				writePdftocanvas(url);
