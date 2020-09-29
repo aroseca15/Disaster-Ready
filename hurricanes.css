@@ -110,6 +110,10 @@ height: 50%;
     font-size: 1.1rem;
 }
 
+#the-canvas {
+    width: 75%;
+}
+
 /* class body and class forecast need to be same color. */
 .body {
     background-color:thistle;
