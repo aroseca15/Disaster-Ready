@@ -20,26 +20,36 @@
     <main id="body">
         <!-- Start of Navbar -->
 
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav id="nav_R" class="navbar" role="navigation" aria-label="main navigation">
             <div class="container">
                 <div class="navbar-end">
                     <div class="navbar-item title">
                         F I R E S
                     </div>
                     <div class="searchAdjust">
-                        <input id="searchBy-city" class="input is-focused" type="text"
-                            placeholder="Search by City"></input>
-                        <button id="cityairquality"
-                            style="background-color: blue;color:white; border-color:skyblue; border-style:double"
-                            type="submit">
-                            <i class="fa fa-search"></i>
+                        <input id="searchBy-city" class="input is-focused" type="text" placeholder="Search by City">
+
+                        <button class="icon" id="cityairquality" type="submit">
+                            <i class="fa fa-search fa-3x"></i>
                         </button>
+
                     </div>
                 </div>
             </div>
         </nav>
 
         <!-- End of Navbar -->
+
+        <!-- Responsive Alternate -->
+    <div id="nav_NewH">
+        <div class="text_Fires">
+            F I R E S
+        </div>
+        <div class="searchAdjust">
+            <input type="text" placeholder="Search by City">
+        </div>
+
+    </div>
 
         <!-- Banner  -->
         <div class="hero-body" id="fires-banner">
@@ -52,14 +62,14 @@
             <div class="column is-one-quarter">
                 <div class="card">
                     <div class="card-content">
-                        <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
+                        <h2 id="airQ" class="title is-2">Current Air Quality:</h2>
                         <div id="air"></div>
                         <h2 class="title is-2"> </h2>
-                            <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
-                            <button id="resourcePdfD" class="button is-success">
-                                <a href="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf"
-                                    download>Plan Download</a>
-                            </button>
+                        <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
+                        <button id="resourcePdfD" class="button is-success">
+                            <a href="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf"
+                                download>Plan Download</a>
+                        </button>
                     </div>
                 </div>
                 <br>
@@ -96,36 +106,18 @@
                             <div class="column is-4">
                                 <h2 id="Weather" class="title is-2">Weather Forecast: </h2>
                             </div>
+                            <div id="forecastC" class="forecast"></div>
                             <div class="forecast"></div>
                         </div>
                     </section>
 
                     <section class="section">
                         <div class='row is-full'>
-                            <div class="column is-3">
-                                <h2 id="News" class="title is-2" value="wildfires"> Latest News: </h2>
-                            </div>
-                    </section>
-                    <!-- <iframe 
-                    name="my_iframe" 
-                    srcdoc="<h1 style='text-align:center; color:#9600fa' ></h1>"
-                    src="https://www.birthdaycalculatorbydate.com/"
-                    width="500px"
-                    height="200px"
-                
-                ></iframe> -->
-                    <section class="section">
-                        <div id="description"></div>
-
-
-                        <div id="description">
-
+                            <h2 id="News" class="title is-2" value="hurricane">Latest News: </h2>
+                            <div id="description"></div>
                         </div>
-                </div>
-                </section>
-                <!-- <div class='row is-full'>
-                    <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
-                </div> -->
+                    </section>
+                
                 <div>
                     <canvas id="the-canvas"
                         src="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Fire_Escape.pdf"></canvas>

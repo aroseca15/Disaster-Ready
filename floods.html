@@ -7,6 +7,8 @@
     <title>Floods</title>
     <!-- Bulma CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="floods.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
@@ -16,18 +18,34 @@
 <body>
     <main class="body">
         <!-- Start of Navbar -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav id="nav_R" class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-end">
                 <div class="navbar-item title">
                     F l o o d s
                 </div>
                 <div class="searchAdjust">
-                    <input id="searchBy-city" class="input is-focused" type="text" placeholder="Search by City"></input>
+                    <input id="searchBy-city" class="input is-focused" type="text" placeholder="Search by City">
+
+                    <button class="icon" id="cityairquality" type="submit">
+                        <i class="fa fa-search fa-3x"></i>
+                    </button>
+
                 </div>
             </div>
         </nav>
 
         <!-- End of Navbar -->
+
+        <!-- Responsive Alternate -->
+    <div id="nav_NewH">
+        <div class="text_Flood">
+            F l o o d s
+        </div>
+        <div class="searchAdjust">
+            <input type="text" placeholder="Search by City">
+        </div>
+
+    </div>
 
         <!-- Banner  -->
         <div class="hero-body" id="floods-banner">
@@ -41,7 +59,7 @@
                 <div class="card">
 
                     <div class="card-content">
-                        <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
+                        <h2 id="airQ" class="title is-2">Current Air Quality:</h2>
                         <div id="air"></div>
                         <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
                         <button id="resourcePdfD" class="button is-success">
@@ -80,7 +98,7 @@
                 <div class='rows'>
                     <section class="section">
                         <div class='row' id='weather'>
-                            <h2 id="Weather" class="title is-2" style="font-family: sans-serif;"> Weather Forecast:
+                            <h2 id="Weather" class="title is-2"> Weather Forecast:
                             </h2>
                             <div class="forecast"></div>
                         </div>
@@ -89,23 +107,15 @@
                     <section class="section">
                         <div class='row is-full'>
                             <h2 id="News" class="title is-2" style="font-family: sans-serif;" value="floods">Latest News: </h2>
-                            <!-- <iframe 
-                    name="my_iframe" 
-                    srcdoc="<h1 style='text-align:center; color:#9600fa' ></h1>"
-                    src="https://www.birthdaycalculatorbydate.com/"
-                    width="500px"
-                    height="200px"
-                       
-                 ></iframe> -->
+                            <div id="description"></div>
                     </section>
-                    <div id="description"></div>
+                    
 
 
 
                 </div>
-                <!-- <div class='row is-full'>
-                    <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
-                </div> -->
+               
+
                 <div>
                     <canvas id="the-canvas"
                         src="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Flood-Infographic-download.pdf"></canvas>
@@ -113,11 +123,6 @@
             </div>
 
         </div>
-
-
-        </div>
-
-
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

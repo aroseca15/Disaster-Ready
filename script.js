@@ -60,7 +60,7 @@ $(document).ready(function () {
 						let cityID = response.id;
 						let newCol = $("<div>").attr("class", "one-fifth");
 						$(".forecast").empty();
-						$(".forecast").prepend(newCol);
+						$("#forecastC").prepend(newCol);
 
 						let newCard = $("<div>");
 						newCol.append(newCard);
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
 			function news() {
 
-				let currentsApikey = "2PB-3mCOU8n1yPyn1EWWMhz3_rfe-58k-wH_Wei5hGE27LV2";
+				let currentsApikey = "YNp25gvEmTzmubIRMtoKTfIO3I9NgNG_5fkJ9IKhkytuRyiB";
 				let keyWords = $("#News").attr("value")
 				let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=" + keyWords + "&apiKey=" + currentsApikey;
 
@@ -141,7 +141,8 @@ $(document).ready(function () {
 						$(".newtab").attr("target", '_blank');
 						urlDiv.text("For more Information, Click Here ");
 						$("#description").append(titleValue, firesDesc, urlDiv);
-						$("h4").css({"color": "black", "font-weight": "545", "font-size": "1.8rem"});
+						$("h4").css({"color": "black", "font-weight": "750", "font-size": "1.8rem"});
+						(urlDiv).css({"color":"blue", "font-weight":"700", "font-size":"1.2rem"});
 					}
 				})
 
