@@ -6,14 +6,24 @@
     background-position: center;
 }
 
+
+
+
+/* responsive replacement below. */
 #nav_NewH {
-display: none;
-background-color:rgb(23, 0, 100);
+    display: none;
+    
 }
 
 .text_Bliz {
     color: whitesmoke;
+    background-color: rgb(23, 0, 100);
 }
+
+
+
+
+
 
 .navbar-end{
     padding-right: 5em; 
@@ -22,6 +32,7 @@ background-color:rgb(23, 0, 100);
 .searchAdjust {
     padding-top: 7ex;
     padding-right: 55ex;
+    background-color: rgb(23, 0, 100);
 }
 
 #searchBy-city {
@@ -53,13 +64,27 @@ background-color:rgb(23, 0, 100);
     color: black;
 } 
 
+.menu-label {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 600;
+}
+
+.menu {
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    
+}
+
 
 .row{
 height: 50%;
 }
 
 .one-fifth{
-    width: 15%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     background-color: burlywood;
@@ -70,15 +95,15 @@ height: 50%;
     display: flex;
     flex-direction: row;
     height: 50%;
-    background-color: darkslategray;
+    background-color: burlywood;
     color: black;
     font-weight: 600;
     font-size: 1.3rem;
+    
 }
 
 .card-body {
     padding: 20px;
-
 }
 
 #the-canvas {
@@ -120,4 +145,24 @@ height: 50%;
     font-size: 5rem;
 }
 
+
+    @media only screen and (max-width: 600px) {
+        #nav_R {
+            display: none;
+        }
+
+        #nav_NewH {
+            display: inline;
+        }
+
+        .one-fifth{
+            display: none;
+        }
+    }
+
+    /* @media only screen and (min-width: 537px){
+        #nav_R{
+            display: ;
+        }
+    } */
 

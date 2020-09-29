@@ -43,6 +43,21 @@
     color: black;
 } 
 
+.menu-label {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 600;
+}
+
+.menu {
+    background-color: lightblue;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    
+}
+
+
 
 .row{
 height: 50%;
