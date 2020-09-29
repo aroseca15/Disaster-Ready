@@ -7,76 +7,111 @@
     <title>Fires</title>
     <!-- Bulma CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fires.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-
+    <!-- Banner Photo Credit: Wilson Malone from Pexels -->
 </head>
 
 <body>
-    <!-- Start of Navbar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <main id="body">
+        <!-- Start of Navbar -->
 
-        <div class='navbar-start'>
-
-            <a class="navbar-item title">
-                Fires
-            </a>
-        </div>
-        <div class="navbar-end">
-
-            <p class="navbar-item is-size-5"> Search for a City:</p>
-            <!-- This will be where users input data about the city weather -->
-            <form class="navbar-item">
-                <input type="text" id="city-input">
-
-                <button id="cityairquality"
-                    style="background-color: blue;color:white; border-color:skyblue; border-style:double" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
-
-    </nav>
-
-    <!-- End of Navbar -->
-    <!-- Banner  -->
-    <div class="hero-body" id="fires-banner">
-        <div class="container">
-
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="column is-one-quarter">
-            <div class="card">
-
-                <div class="card-content">
-                    <h2 class="title is-2"> Air Quality</h2>
-                    <div id="air"></div>
-                    <h2 class="title is-2"> </h2>
-                    <button id="resourcePdf">Fire escape plan</button>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-end">
+                    <div class="navbar-item title">
+                        F I R E S
+                    </div>
+                    <div class="searchAdjust">
+                        <input id="searchBy-city" class="input is-focused" type="text"
+                            placeholder="Search by City"></input>
+                    </div>
                 </div>
             </div>
+        </nav>
 
+        <!-- End of Navbar -->
+
+        <!-- Banner  -->
+        <div class="hero-body" id="fires-banner">
+            <div class="container">
+
+            </div>
         </div>
-        <div class="column">
 
-            <div class='rows'>
-                <div class='row' id='weather'>
-                    <h2 class="title is-2" style="font-family: sans-serif;"> Weather </h2>
-                    <div class="forecast"></div>
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
+                        <div id="air"></div>
+                        <h2 class="title is-2"> </h2>
+                        <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
+                        <button id="resourcePdfD" class="button is-success">Plan Download</button>
+                    </div>
                 </div>
-                <div class='row is-full'>
-                    <h2 class="title is-2" style="font-family: sans-serif;"> News </h2>
+                <br>
+                <br>
+                <aside class="menu">
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="https://www.nationaloutages.com/us-power-outages/">Power Outage Map</a></li>
+                        <li><a href="https://www.cdc.gov/healthywater/emergency/making-water-safe.html">Make The Water
+                                Clean</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Click On Helpful Links:
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="https://www.ready.gov/">ready.gov</a></li>
+                        <li><a href="https://www.nsc.org/home-safety/safety-topics/emergency-preparedness">nsc.org</a>
+                        </li>
+                        <li><a
+                                href="https://www.cdc.gov/disasters/covid-19/disasters_severe_weather_and_covid-19.html">cdc.gov</a>
+                        </li>
+                        <li><a href="https://www.usa.gov/prepare-for-disasters">usa.gov</a></li>
+                        <li><a href="https://www.whitepages.com/business">whitepages.com</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="column">
+                <div class='rows'>
+                    <section class="section">
+                        <div class='row' id='weather'>
+                            <div class="column is-4">
+                                <h2 id="Weather" class="title is-2">Weather Forecast: </h2>
+                            </div>
+                            <div class="forecast"></div>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class='row is-full'>
+                            <div class="column is-3">
+                                <h2 id="News" class="title is-2"> Latest News: </h2>
+                            </div>
+                    </section>
+                    <!-- <iframe 
+                    name="my_iframe" 
+                    srcdoc="<h1 style='text-align:center; color:#9600fa' ></h1>"
+                    src="https://www.birthdaycalculatorbydate.com/"
+                    width="500px"
+                    height="200px"
+                
+                ></iframe> -->
+                    <section class="section">
+                        <div id="description"></div>
+
 
                     <div id="description">
 
                     </div>
                 </div>
+                </section>
                 <!-- <div class='row is-full'>
                     <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
                 </div> -->
@@ -87,10 +122,15 @@
             </div>
 
         </div>
-    </div>
 
+
+        </div>
+
+
+
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="fires.js" type="text/javascript"></script>
 </body>
 
 </html>
