@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="floods.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <!-- Banner Photo Credit: Chris Gallagher by Unsplash.com -->
 </head>
 
@@ -43,7 +44,9 @@
                         <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
                         <div id="air"></div>
                         <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
-                        <button id="resourcePdfD" class="button is-success"><a href="">Plan Download</a></button>
+                        <button id="resourcePdfD" class="button is-success">
+                            <a href="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Flood-Infographic-download.pdf" download>Plan Download</a>
+                        </button>
                     </div>
                 </div>
                 <br>
@@ -103,6 +106,10 @@
                 <!-- <div class='row is-full'>
                     <h2 class="title is-2" style="font-family: sans-serif;"> Evacuation Status </h2>
                 </div> -->
+                <div>
+                    <canvas id="the-canvas"
+                        src="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Flood-Infographic-download.pdf"></canvas>
+                </div>
             </div>
 
         </div>
