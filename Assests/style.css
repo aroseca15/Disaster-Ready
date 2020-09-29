@@ -18,7 +18,18 @@
 .navbar-item{
     color: black;
     font-size: 5rem;
-    padding-right: 6ex;
+    padding-right: 15ex;
+}
+
+/* responsive CSS replacement below. */
+#nav_NewH {
+    display: none;
+    
+}
+
+.text_Index {
+    color: whitesmoke;
+    background-color: rgb(23, 0, 100);
 }
 
 .row1 , .row2{
@@ -236,6 +247,24 @@
     opacity: 1;
 }
 
+
+/* Responsive media querys below. */
+
+@media only screen and (max-width: 600px) {
+    #nav_R {
+        display: none;
+    }
+
+    #nav_NewH {
+        display: top;
+    }
+}
+
+/* @media only screen and (min-width: 537px){
+    #nav_R{
+        display: ;
+    }
+} */
 
 
 

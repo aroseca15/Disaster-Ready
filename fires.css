@@ -6,6 +6,41 @@
     background-position: center;
 }
 
+#body {
+    background-color:rgba(169, 169, 169, 0.768);
+}
+
+.column {
+    padding-left: 3rem;
+}
+
+.section {
+    padding-left: 7rem;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.navbar-item{
+    color: whitesmoke;
+    font-size: 5rem;
+}
+
+/* responsive CSS replacement below. */
+#nav_NewH {
+    display: none;
+    
+}
+
+.text_Fires {
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 3rem;
+    background-color: black;
+}
+
+
 .navbar-end{
     padding-right: 5em; 
 }
@@ -13,11 +48,27 @@
 .searchAdjust {
     padding-top: 7ex;
     padding-right: 30ex;
+    background-color: black;
 }
 
 #searchBy-city {
     font-size: 1.3rem;
     margin-left: 10ex;
+}
+
+.fa {
+    background-color: blue;
+    color:white; 
+    border-color:skyblue; 
+    border-style:double;   
+}
+
+.icon {
+position: relative;
+left: 32rem;
+bottom: 2.4rem;
+
+
 }
 
 #airQ {
@@ -107,25 +158,34 @@ height: 50%;
     font-family: sans-serif;
     color: black;
     font-weight: 100;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 #the-canvas {
     width: 75%;
 }
 
-/* class body and class forecast need to be same color. */
-#body {
-    background-color:rgba(169, 169, 169, 0.768);
+/* Responsive media querys below. */
+
+@media only screen and (max-width: 600px) {
+    #nav_R {
+        display: none;
+    }
+
+    #nav_NewH {
+        display: inline;
+    }
+
+    /* .one-fifth{
+        display: none;
+    } */
 }
 
-.navbar {
-    background-color: black;
-}
+/* @media only screen and (min-width: 537px){
+    #nav_R{
+        display: ;
+    }
+} */
 
-.navbar-item{
-    color: whitesmoke;
-    font-size: 5rem;
-}
 
 

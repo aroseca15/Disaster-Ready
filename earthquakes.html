@@ -8,13 +8,15 @@
     <!-- Bulma CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="earthquakes.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 </head>
 
 <body class="body">
     <!-- Start of Navbar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav id="nav_R" class="navbar" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <div class="navbar-item title">
@@ -22,12 +24,28 @@
                 </div>
                 <div class="searchAdjust">
                     <input id="searchBy-city" class="input is-focused" type="text" placeholder="Search by City">
+
+                    <button class="icon" id="cityairquality" type="submit">
+                        <i class="fa fa-search fa-3x"></i>
+                    </button>
+
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- End of Navbar -->
+
+    <!-- Responsive Alternate -->
+    <div id="nav_NewH">
+        <div class="text_Earth">
+            E a r t h q u a k e s
+        </div>
+        <div class="searchAdjust">
+            <input type="text" placeholder="Search by City">
+        </div>
+
+    </div>
 
     <!-- Banner  -->
     <div class="hero-body" id="earthquakes-banner">
@@ -41,11 +59,10 @@
             <div class="card">
 
                 <div class="card-content">
-                    <h2 id="airQ" class="title is-2">Local Air Quality:</h2>
+                    <h2 id="airQ" class="title is-2">Current Air Quality:</h2>
                     <div id="air"></div>
-                    <button id="resourcePdf" class="button is-warning">View Plan of Action</button>
                     <button id="resourcePdfD" class="button is-success">
-                        <a href="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Quake-101-Infographic.jpg" download>Plan Download</a>
+                        <a href="https://cdn.shopify.com/s/files/1/0338/9626/7916/files/Quake-101-Infographic.jpg" download>Plan Of Action Download</a>
                     </button>
                 </div>
             </div>
@@ -88,14 +105,11 @@
 
                 <section class="section">
                     <div class='row is-full'>
-                        <div class="column is-3">
-                            <h2 id="News" class="title is-2" value="earthquakes"> Latest News: </h2>
-                        </div>
+                        <h2 id="News" class="title is-2" value="hurricane">Latest News: </h2>
+                        <div id="description"></div>
+                    </div>
                 </section>
                 
-                <section class="section">
-                    <div id="description"></div>
-                </section>
             </div>
 
             <div>
