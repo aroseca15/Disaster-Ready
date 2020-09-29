@@ -45,11 +45,9 @@ $(document).ready(function () {
 
 			function weatherForecast(city) {
 				let weatherAPI = "fe4a853726c79035bac73e26c523869e";
-				// let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=" + weatherAPI
+				
 				let queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + weatherAPI;
-				// let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zip + ",us&appid=" + weatherAPI
-
-
+			
 				$.ajax({
 					url: queryURL1,
 					method: "GET"
@@ -57,29 +55,19 @@ $(document).ready(function () {
 					.then(function (response) {
 						console.log(response);
 						console.log(queryURL1);
-						let cityID = response.id;
-						let newCol = $("<div>").attr("class", "one-fifth");
 						$(".forecast").empty();
-						$("#forecastC").prepend(newCol);
-
-						let newCard = $("<div>");
-						newCol.append(newCard);
-
+						let cityID = response.id;						
+						let weatherIcon = response.weather[0].icon;
+						let iconURL = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
+						let icon = $("<img>").attr("src", iconURL);
 						let cardDate = $("<div>").text(date);
-						newCard.append(cardDate);
-
-						let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
-						newCard.append(cardImg);
-
-						let bodyDiv = $("<div>").attr("class", "card-content");
-						newCard.append(bodyDiv);
-
-						let tempF = Math.floor((response.main.temp - 273.15) * 1.80 + 32)
-
-						bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
-						bodyDiv.append($("<p>").text("Humidity: " + response.main.humidity + "%"));
-						bodyDiv.append($("<p>").text("wind: " + response.wind.speed + " MPH"));
-
+						let temp = $("<p>").text("Temp: " + ((response.main.temp - 273.15) * 1.80 + 32).toFixed(2) + " °F");
+						let humid = $("<p>").text("Humidity: " + response.main.humidity + "%");
+						let card = $("<div>").addClass("card");
+						let cardBody = $("<div>").addClass("card-content");
+						cardBody.append(cardDate,icon, temp, humid);
+						card.append(cardBody);
+						$(".forecast").prepend(card);
 
 						let queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + weatherAPI;
 						$.ajax({
@@ -89,36 +77,36 @@ $(document).ready(function () {
 
 							.then(function (response) {
 								//console.log(response);
-								let newrow = $(".forecast")
+								
 								for (let i = 0; i < response.list.length; i++) {
 									if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-										let newCol = $("<div>").attr("class", "one-fifth");
-										newrow.append(newCol);
-
-										let newCard = $("<div>");
-										newCol.append(newCard);
-
+										
 										let cardDate = $("<div>").text(moment(response.list[i].dt, "X").format("MMM Do"));
-										newCard.append(cardDate);
+										let tempK = response.list[i].main.temp;
+										let tempF = (tempK - 273.15) * 1.80 + 32;
+										let weatherIcon1 = response.list[i].weather[0].icon;
+										let iconURL = "https://openweathermap.org/img/w/" + weatherIcon1 + ".png";
+										let icon = $("<img>").attr("src", iconURL);
+										let temp = $("<p>").html("Temp: " + tempF.toFixed(2) + " °F");
+										let humid = $("<p>").text("Humidity: " + response.list[i].main.humidity + "%");
+										let card = $("<div>").addClass("card");
+										let cardBody = $("<div>").addClass("card-content");
+										cardBody.append(cardDate, icon, temp, humid);
+										card.append(cardBody);
+										//card.css("background-color", "blue");
+										//card.css("color", "white");
 
-										let cardImg = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png");
-										newCard.append(cardImg);
+										$(".forecast").append(card);
 
-										let bodyDiv = $("<div>").attr("class", "card-content");
-										newCard.append(bodyDiv);
-
-										let tempF = Math.floor((response.list[i].main.temp - 273.15) * 1.80 + 32)
-										//newCard.empty();
-
-										bodyDiv.append($("<p>").text("Temp: " + tempF + " °F"));
-										bodyDiv.append($("<p>").text("Humidity: " + response.list[i].main.humidity + "%"));
-										bodyDiv.append($("<p>").text("wind: " + response.list[i].wind.speed + " MPH"));
 									}
 								}
 							})
 					});
 
 			}
+
+
+
 
 			function news() {
 
