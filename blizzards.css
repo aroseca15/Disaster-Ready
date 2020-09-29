@@ -110,14 +110,14 @@ bottom: 2.4rem;
 .row{
 height: 50%;
 }
-
+/* 
 .one-fifth{
     width: 40%;
     display: flex;
     flex-direction: row;
     background-color: burlywood;
     
-}
+} */
 
 .forecast{
     display: flex;
@@ -164,6 +164,14 @@ height: 50%;
 #the-canvas {
     width: 75%;
 }
+
+.cards-deck{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 12rem); 
+    grid-gap: 0.5rem;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
 
 /* Responsive media querys below. */
 
