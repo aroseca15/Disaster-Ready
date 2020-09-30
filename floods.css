@@ -74,7 +74,7 @@ bottom: 2.4rem;
     color: black;
     font-weight: 600;
 }
-.card{
+#card1 {
     background-color: rosybrown;
     max-height:400px;
     color: black;
@@ -113,14 +113,6 @@ bottom: 2.4rem;
 height: 50%;
 }
 
-/* .one-fifth{
-    width: 15%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(222, 184, 135);
-    
-} */
-
 .forecast{
     display: flex;
     flex-direction: row;
@@ -131,8 +123,12 @@ height: 50%;
     font-size: 1.3rem;
 }
 
-.card-body {
+.card-content {
     padding: 20px;
+    background-color: rgb(194, 154, 102);
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
 
 }
 
@@ -172,7 +168,7 @@ height: 50%;
     grid-gap: 0.5rem;
     justify-content: space-between;
     align-content: flex-start;
-  }
+}
 /* Responsive media querys below. */
 
 @media only screen and (max-width: 600px) {

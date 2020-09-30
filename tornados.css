@@ -73,7 +73,7 @@ bottom: 2.4rem;
     color: black;
     font-weight: 600;
 }
-.card{
+#card1 {
     background-color: rgba(71, 61, 139, 0.367);
     max-height:400px;
     color: black;
@@ -112,14 +112,6 @@ bottom: 2.4rem;
 height: 50%;
 }
 
-/* .one-fifth{
-    width: 15%;
-    display: flex;
-    flex-direction: row;
-    background-color: burlywood;
-    
-} */
-
 .forecast{
     display: flex;
     flex-direction: row;
@@ -130,8 +122,12 @@ height: 50%;
     font-size: 1.3rem;
 }
 
-.card-body {
+.card-content {
     padding: 20px;
+    background-color: burlywood;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
 
 }
 
