@@ -52,7 +52,7 @@
 
 #searchBy-city {
     font-size: 1.3rem;
-    margin-left: 10ex;
+    margin-left: 8ex;
 }
 
 .fa {
@@ -73,7 +73,7 @@ bottom: 2.4rem;
     color: black;
     font-weight: 600;
 }
-.card{
+#card1 {
     background-color: whitesmoke;
     max-height:400px;
     color: black;
@@ -110,28 +110,24 @@ bottom: 2.4rem;
 .row{
 height: 50%;
 }
-/* 
-.one-fifth{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    background-color: burlywood;
-    
-} */
 
 .forecast{
     display: flex;
     flex-direction: row;
     height: 50%;
-    background-color: burlywood;
+    background-color: darkslategray;
     color: black;
     font-weight: 600;
     font-size: 1.3rem;
     
 }
 
-.card-body {
+.card-content {
     padding: 20px;
+    background-color: burlywood;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 #the-canvas {
@@ -171,7 +167,7 @@ height: 50%;
     grid-gap: 0.5rem;
     justify-content: space-between;
     align-content: flex-start;
-  }
+}
 
 /* Responsive media querys below. */
 
@@ -183,15 +179,6 @@ height: 50%;
         #nav_NewH {
             display: inline;
         }
-
-        /* .one-fifth{
-            display: none;
-        } */
     }
 
-    /* @media only screen and (min-width: 537px){
-        #nav_R{
-            display: ;
-        }
-    } */
 

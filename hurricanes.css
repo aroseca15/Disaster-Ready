@@ -72,7 +72,7 @@ bottom: 2.4rem;
     color: black;
     font-weight: 600;
 }
-.card{
+#card1 {
     background-color: rgb(173, 230, 221);
     max-height:400px;
     color: black;
@@ -99,7 +99,7 @@ bottom: 2.4rem;
 }
 
 .menu {
-    background-color: whitesmoke;
+    background-color: rgb(231, 209, 209);
     font-size: 1.5rem;
     color: black;
     font-weight: 600;
@@ -111,14 +111,6 @@ bottom: 2.4rem;
 height: 50%;
 }
 
-/* .one-fifth{
-    width: 15%;
-    display: flex;
-    flex-direction: row;
-    background-color: beige;
-    
-} */
-
 .forecast{
     display: flex;
     flex-direction: row;
@@ -129,8 +121,12 @@ height: 50%;
     font-size: 1.3rem;
 }
 
-.card-body {
+.card-content {
     padding: 20px;
+    background-color: rgba(165, 124, 124, 0.741);
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
 
 }
 
