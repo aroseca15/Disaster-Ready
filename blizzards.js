@@ -110,7 +110,7 @@ $(document).ready(function () {
 
 			function news() {
 
-				let currentsApikey = "YNp25gvEmTzmubIRMtoKTfIO3I9NgNG_5fkJ9IKhkytuRyiB";
+				let currentsApikey = "0CaluzsMUIwTbWXVvlnQ3u_2SS7vRmdcOLJ2vgVecCLy_TON";
 				let keyWords = $("#News").attr("value")
 				let queryURL3 = "https://api.currentsapi.services/v1/search?keywords=" + keyWords + "&apiKey=" + currentsApikey;
 
