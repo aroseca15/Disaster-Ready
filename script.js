@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 				weatherForecast(cityName);
 				//openmapquest API is used to get the latitude and longitude for the city we search for
-				let queryGeocodeURL = "http://open.mapquestapi.com/geocoding/v1/address?key=nMseeiPX0p0AJ260D64oU69As8QirbGq&location=" + cityName;
+				let queryGeocodeURL = "https://open.mapquestapi.com/geocoding/v1/address?key=nMseeiPX0p0AJ260D64oU69As8QirbGq&location=" + cityName;
 				$.ajax({
 					url: queryGeocodeURL,
 					method: "GET",
